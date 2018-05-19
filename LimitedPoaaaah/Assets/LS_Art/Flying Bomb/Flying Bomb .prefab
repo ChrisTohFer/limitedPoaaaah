@@ -58,6 +58,7 @@ GameObject:
   - component: {fileID: 33078051171136118}
   - component: {fileID: 23793514081230494}
   - component: {fileID: 135050257587833232}
+  - component: {fileID: 95474090487221350}
   m_Layer: 0
   m_Name: 'Flying Bomb '
   m_TagString: Untagged
@@ -121,8 +122,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1475547126482292}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1722226, y: 0.375, z: 0.1968422}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -1.125, y: 0.5, z: -0.125}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 4268292770704572}
   - {fileID: 4247248640800978}
@@ -428,6 +429,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &95474090487221350
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1475547126482292}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6ea60ce2cb121804481071c1a7980df3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!135 &135050257587833232
 SphereCollider:
   m_ObjectHideFlags: 1
