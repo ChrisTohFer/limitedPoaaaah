@@ -7,7 +7,7 @@ public class TouchDamage : MonoBehaviour {
     //Variables ~~~
 
     [Header("Properties")]
-    public float _damage;
+    public int _damage;
 
     //Triggers ~~~
 
@@ -15,8 +15,11 @@ public class TouchDamage : MonoBehaviour {
     {
         if(other.tag == "Player")
         {
-            //Damage stuff
+            PowerLevel targetPower = other.GetComponent<PowerLevel>();
+            Debug.Log(targetPower.AddPower(_damage));
         }
+
+        gameObject.SetActive(false);
     }
 
 }
