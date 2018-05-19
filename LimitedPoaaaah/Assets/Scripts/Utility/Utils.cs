@@ -16,6 +16,7 @@ public static class Utils {
         }
         else
         {
+            pos = Vector3.zero;
             return false;
         }
     }
