@@ -33,7 +33,7 @@ public class BasicAttack : MonoBehaviour {
 
     void FixedUpdate()
     {
-        if(Input.GetMouseButtonDown(0) && _timer <= 0f)
+        if(Input.GetMouseButton(0) && _timer <= 0f)
         {
             Vector3 position;
             if(Utils.GroundRay(out position))
