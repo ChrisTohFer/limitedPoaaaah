@@ -44,4 +44,15 @@ public class Projectile : MonoBehaviour {
         _lifeTime = range / speed;
     }
 
+    //Triggers ~~~
+
+    
+    void OnTriggerEnter(Collider collider)
+    {
+        if(collider.tag == "Walls")
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
 }
