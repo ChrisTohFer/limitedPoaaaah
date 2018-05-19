@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed;
+    public float speed =20;
     void Update()
     {
         var x = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
