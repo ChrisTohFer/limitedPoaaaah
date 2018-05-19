@@ -8,10 +8,6 @@ public class CameraControl : MonoBehaviour {
 
     //Variables and references ~~~
 
-    //References
-    [Header("References")]
-    public Transform _followTarget;
-
     //Properties
     [Header("Properties")]
     public float _leftBound = 0f;
@@ -31,7 +27,7 @@ public class CameraControl : MonoBehaviour {
     {
         _minSpeed = _speed / 2.0f;
         _angle = Mathf.Deg2Rad * Camera.main.transform.eulerAngles.x;
-        _offset = new Vector3(0f, _camHeight, -_camHeight * Mathf.Tan(_angle));
+        _offset = new Vector3(0f, _camHeight, -_camHeight / Mathf.Tan(_angle));
     }
     public void SetSpeed(float speed)
     {
@@ -49,7 +45,7 @@ public class CameraControl : MonoBehaviour {
 	void Update () {
 
         //Calculate the displacement and distance between camera and target
-        Vector3 targetPos = _followTarget.position + _offset;
+        Vector3 targetPos = GlobalTarget._player.position + _offset;
         Vector3 displacement = targetPos - transform.position;
         float distance = displacement.magnitude;
 

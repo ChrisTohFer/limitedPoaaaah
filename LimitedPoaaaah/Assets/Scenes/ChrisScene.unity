@@ -273,7 +273,10 @@ GameObject:
   - component: {fileID: 1171010430}
   - component: {fileID: 1171010434}
   - component: {fileID: 1171010435}
+  - component: {fileID: 1171010439}
+  - component: {fileID: 1171010438}
   - component: {fileID: 1171010436}
+  - component: {fileID: 1171010437}
   m_Layer: 0
   m_Name: Unit
   m_TagString: Player
@@ -342,7 +345,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1171010429}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.35, y: 0, z: 4.06}
+  m_LocalPosition: {x: 0.3, y: 0, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -387,6 +390,48 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1171010437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1171010429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1babb560289002d4394860ce94efe94b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+--- !u!114 &1171010438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1171010429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 030e028551537ba459c15a407749c8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefab: {fileID: 1403734154922684, guid: e4befa39c0546cc4eb850d4661c5e2d8, type: 2}
+  _startCount: 3
+  _max: 3
+--- !u!114 &1171010439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1171010429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7de39c703a825734e9af4e64d2466691, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ammo: {fileID: 1171010438}
+  _damage: 1
+  _projectileSpeed: 20
+  _range: 10
+  _cooldown: 1
 --- !u!1 &1288455118
 GameObject:
   m_ObjectHideFlags: 0
