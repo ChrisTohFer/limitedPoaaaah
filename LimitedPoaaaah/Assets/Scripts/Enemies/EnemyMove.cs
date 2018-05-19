@@ -33,6 +33,9 @@ public class EnemyMove : MonoBehaviour {
     void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
+        _agent.speed = _speed;
+        _agent.angularSpeed = _angularSpeed;
+        _agent.acceleration = _acceleration;
     }
 
     //Update ~~~

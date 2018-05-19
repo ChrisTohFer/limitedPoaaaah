@@ -41,6 +41,9 @@ public class BasicAttack : MonoBehaviour {
                 GameObject proj = _ammo.Take();
                 Projectile p = proj.GetComponent<Projectile>();
                 p.Fire(new Vector3(position.x, transform.position.y, position.z), transform.position, _range, _projectileSpeed);
+                PlayerProj pp = proj.GetComponent<PlayerProj>();
+                pp._damage = _damage;
+
                 _timer = _cooldown;
             }
         }
