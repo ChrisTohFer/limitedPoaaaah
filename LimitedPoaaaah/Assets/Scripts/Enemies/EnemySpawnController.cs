@@ -25,8 +25,8 @@ public class EnemySpawnController : MonoBehaviour {
 
     void FixedUpdate () {
 		if(_chargeEnemyCooldown < 0f)
-        {
-            _chargeEnemyCooldown = _chargeEnemySpawnTime;
+        { 
+            _chargeEnemyCooldown = _chargeEnemySpawnTime = _chargeEnemySpawnTime * 0.95f;
             _spawner.CircleSpawn(EnemySpawner.EnemyType.CHARGE_ENEMY, Vector3.zero, 20f);
         }
         else

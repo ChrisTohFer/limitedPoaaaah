@@ -57,11 +57,17 @@ public class EnemyMove : MonoBehaviour {
 
     public void SetDestination(Vector3 destination)
     {
-        float x = Random.value - 0.5f;
-        float y = Random.value - 0.5f;
-        Vector3 offset = new Vector3(x, 0f, y).normalized * _destinationOffset * Random.value;
+        Vector3 displacement = destination - transform.position;
+        displacement = Quaternion.Euler(0f, _destinationOffset * (Random.value - 0.5f), 0f) * displacement;
 
-        _agent.SetDestination(destination + offset);
+        _agent.SetDestination(displacement + transform.position);
+
+        /*float x = Random.value - 0.5f;
+        float y = Random.value - 0.5f;
+        float offsetMagnitude = _destinationOffset * (destination - transform.position).magnitude;
+        Vector3 offset = new Vector3(x, 0f, y).normalized * offsetMagnitude * Random.value;
+
+        _agent.SetDestination(destination + offset);*/
     }
 
 }
