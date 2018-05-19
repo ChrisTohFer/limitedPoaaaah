@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 135386533994274468}
   - component: {fileID: 114435053359743098}
   - component: {fileID: 195353672011242234}
+  - component: {fileID: 114401783839703820}
   m_Layer: 0
   m_Name: ChargeEnemy
   m_TagString: Untagged
@@ -38,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1976907162755478}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 9.25, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -86,6 +87,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1976907162755478}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114401783839703820
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1976907162755478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09f473fd7fa497948b0174aff361f45a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 2
 --- !u!114 &114435053359743098
 MonoBehaviour:
   m_ObjectHideFlags: 1

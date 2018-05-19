@@ -45,7 +45,6 @@ public class EnemySpawner : MonoBehaviour {
 
         return g;
     }
-    //Spawn in a circle
 
     //Spawn randomly somewhere in a square
     public GameObject SquareSpawn(EnemyType type, Vector3 center, float width, float height)
