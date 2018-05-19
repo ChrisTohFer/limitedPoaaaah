@@ -7,10 +7,16 @@ public class PlayerController : MonoBehaviour
     public float speed =20;
     void Update()
     {
-        var x = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
-        var z = Input.GetAxis("Vertical") * Time.deltaTime * speed;
+        Vector3 movement;
 
-        transform.Translate(x, 0, 0);
-        transform.Translate(0, 0, z);
+        var x = Input.GetAxis("Horizontal") * Time.deltaTime * speed + transform.position.x;
+        var z = Input.GetAxis("Vertical") * Time.deltaTime * speed + transform.position.z;
+
+       // movement = new Vector3(x, 0, z);
+       // movement.Normalize()
+
+        /**transform.Translate(x, 0, 0);
+        transform.Translate(0, 0, z); **/
+        transform.position = new Vector3(x, transform.position.y, z);
     }
 }
