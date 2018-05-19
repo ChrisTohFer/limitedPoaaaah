@@ -25,9 +25,10 @@ GameObject:
   - component: {fileID: 114435053359743098}
   - component: {fileID: 195353672011242234}
   - component: {fileID: 114401783839703820}
+  - component: {fileID: 114931286389305660}
   m_Layer: 0
   m_Name: ChargeEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,12 +111,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a31b0d726b06334c96a7cc25651ab03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1
+  _speed: 4
   _angularSpeed: 360
   _acceleration: 10
   _pathUpdateTime: 1
   _updateRandomTime: 0.1
   _destinationOffset: 0.5
+--- !u!114 &114931286389305660
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1976907162755478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a2d6bb3c71f57f4783d136bc7638235, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 4
 --- !u!135 &135386533994274468
 SphereCollider:
   m_ObjectHideFlags: 1
