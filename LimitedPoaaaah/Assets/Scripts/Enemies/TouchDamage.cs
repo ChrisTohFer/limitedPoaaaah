@@ -17,9 +17,10 @@ public class TouchDamage : MonoBehaviour {
         {
             PowerLevel targetPower = other.GetComponent<PowerLevel>();
             Debug.Log(targetPower.AddPower(_damage));
+            gameObject.SetActive(false);
         }
 
-        gameObject.SetActive(false);
+        
     }
 
 }
