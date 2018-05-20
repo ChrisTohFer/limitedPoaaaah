@@ -17,9 +17,8 @@ public class PlayerRotate : MonoBehaviour
         {
 
          //   mousePos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.z, Camera.main.transform.position.z - transform.position.z));
-            transform.LookAt(-position);
-            transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, transform.eulerAngles.z);
+            transform.LookAt(position);
+            transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180f, 0);
         }
-        transform.rotation = Quaternion.Euler(0, 0, -90);
     }
 }
