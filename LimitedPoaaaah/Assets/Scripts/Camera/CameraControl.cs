@@ -18,7 +18,6 @@ public class CameraControl : MonoBehaviour {
     public float _speed = 5f;
     public float _camHeight = 10f;
     float _minSpeed;
-    float _angle;
     Vector3 _offset;
 
     //Initialisation ~~~
@@ -26,8 +25,12 @@ public class CameraControl : MonoBehaviour {
     void Start()
     {
         _minSpeed = _speed / 2.0f;
-        _angle = Mathf.Deg2Rad * Camera.main.transform.eulerAngles.x;
-        _offset = new Vector3(0f, _camHeight, -_camHeight / Mathf.Tan(_angle));
+        float angle = Mathf.Deg2Rad * Camera.main.transform.eulerAngles.x;
+        float rotation = Mathf.Deg2Rad * Camera.main.transform.eulerAngles.y;
+        float radius = _camHeight / Mathf.Tan(angle);
+        float x = -radius * Mathf.Sin(rotation);
+        float z = -radius * Mathf.Cos(rotation);
+        _offset = new Vector3(x, _camHeight, z);
     }
     public void SetSpeed(float speed)
     {

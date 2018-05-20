@@ -30,6 +30,11 @@ public class PowerLevel : MonoBehaviour {
     {
         get { return _power; }
     }
+    bool _kill = false;
+    public bool Kill
+    {
+        get { return _kill; }
+    }
 
     //Initialisation ~~~
 
@@ -67,6 +72,13 @@ public class PowerLevel : MonoBehaviour {
     public float AddPower(int power)
     {
         _power += power;
+        if (_power > _maxPower)
+            _power = _maxPower;
+        if (_power < 0)
+        {
+            _power = 0;
+            _kill = true;
+        }
 
         AdjustSettings();
 

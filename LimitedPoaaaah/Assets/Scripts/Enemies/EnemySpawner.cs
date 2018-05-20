@@ -10,7 +10,8 @@ public class EnemySpawner : MonoBehaviour {
 
     public enum EnemyType
     {
-        CHARGE_ENEMY
+        CHARGE_ENEMY,
+        BATTERY
     }
 
     //Variables and references ~~~
@@ -18,6 +19,7 @@ public class EnemySpawner : MonoBehaviour {
     //Pool references
     [Header("Pool references")]
     public ObjectPool _chargeEnemyPool;
+    public ObjectPool _batteryPool;
 
 	// Use this for initialization
 	void Start () {
@@ -34,6 +36,9 @@ public class EnemySpawner : MonoBehaviour {
         {
             case EnemyType.CHARGE_ENEMY:
                 g = _chargeEnemyPool.Take();
+                break;
+            case EnemyType.BATTERY:
+                g = _batteryPool.Take();
                 break;
         }
 

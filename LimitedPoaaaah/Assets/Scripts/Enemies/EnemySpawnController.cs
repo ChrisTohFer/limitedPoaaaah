@@ -11,6 +11,7 @@ public class EnemySpawnController : MonoBehaviour {
     [Header("Component References")]
     public EnemySpawner _spawner;
     public ObjectPool _enemyPool;
+    public ObjectPool _batteryPool;
     public Text _waveCounter;
     public Text _waveTimer;
 
@@ -24,6 +25,11 @@ public class EnemySpawnController : MonoBehaviour {
     public float _durationProportionalIncrease = 1.2f;
     public float _breakTime = 3.0f;
 
+    [Header("Battery Properties")]
+    public float _batteriesPerWave = 1;
+    public float _batteriesFlatIncrease = 1f;
+    public float _batteriesProportionalIncrease = 1f;
+
     //Other settings
     [Header("Other settings")]
     public float _mapSizeX = 40f;
@@ -32,9 +38,11 @@ public class EnemySpawnController : MonoBehaviour {
     //Variables
     float _duration;
     float _count;
+    float _batteryCount;
     float _amplitude;
 
     float _enemyPotential = 0f;
+    float _batteryPotential = 1f;
     public float _timer = 0f;
     private int _wave = 0;
 
@@ -44,6 +52,7 @@ public class EnemySpawnController : MonoBehaviour {
     {
         _duration = _waveDuration;
         _count = _enemiesPerWave;
+        _batteryCount = _batteriesPerWave;
         CalculateAmplitude();
     }
     //Calculate the function amplitude constant
@@ -65,14 +74,27 @@ public class EnemySpawnController : MonoBehaviour {
                 _spawner.SquareSpawn(EnemySpawner.EnemyType.CHARGE_ENEMY, Vector3.zero, _mapSizeX, _mapSizeY);
             }
 
-            if(_timer >= _duration)
+            _batteryPotential += WaveFunction() * (_batteryCount / _count);
+            while (_batteryPotential >= 1.0f)
+            {
+                _batteryPotential -= 1f;
+                _spawner.SquareSpawn(EnemySpawner.EnemyType.BATTERY, Vector3.zero, _mapSizeX, _mapSizeY);
+            }
+
+            if (_timer >= _duration)
             {
                 _duration *= _durationProportionalIncrease;
                 _duration += _durationFlatIncrease;
+
                 _count *= _enemiesProportionalIncrease;
                 _count += _enemiesFlatIncrease;
 
-                _enemyPool._max = (int)(_count * _enemiesProportionalIncrease);
+                _batteryCount *= _batteriesProportionalIncrease;
+                _batteryCount += _batteriesFlatIncrease;
+
+                _enemyPool._max = Mathf.RoundToInt(_count * _enemiesProportionalIncrease);
+                _batteryPool._max = Mathf.RoundToInt(_batteryCount);
+
                 CalculateAmplitude();
 
                 _timer = -_breakTime;
