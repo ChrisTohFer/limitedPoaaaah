@@ -140,6 +140,7 @@ GameObject:
   - component: {fileID: 114042564182470004}
   - component: {fileID: 54931159374913288}
   - component: {fileID: 65245913068550398}
+  - component: {fileID: 114154650301234852}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2128,6 +2129,30 @@ MonoBehaviour:
   _prefab: {fileID: 1403734154922684, guid: e4befa39c0546cc4eb850d4661c5e2d8, type: 2}
   _startCount: 10
   _max: 10
+--- !u!114 &114154650301234852
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1233263935925072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 024a1d7fcc69bf34e9e5c90262c7ac3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _chargeCube: {fileID: 0}
+  _bodyTrans: {fileID: 4374680655946284}
+  _chargeArea: {fileID: 0}
+  _minLength: 1
+  _maxLength: 10
+  _minWidth: 0.3
+  _maxWidth: 4
+  _minDamage: 2
+  _maxDamage: 4
+  _minEnergyCost: 1
+  _maxEnergyCost: 3
+  _chargeTime: 2.5
+  _coolDown: 1
 --- !u!114 &114236993828057150
 MonoBehaviour:
   m_ObjectHideFlags: 1
