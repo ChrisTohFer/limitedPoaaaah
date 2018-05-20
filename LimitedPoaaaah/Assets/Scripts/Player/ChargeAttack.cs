@@ -24,6 +24,10 @@ public class ChargeAttack : MonoBehaviour {
     public float _chargeTime = 2f;
     public float _coolDown = 1f;
 
+    //Audio
+    public AudioSource Charge;
+    public AudioSource Shoot;
+
     //Variables
     float _length;
     float _width;
@@ -48,12 +52,15 @@ public class ChargeAttack : MonoBehaviour {
             {
                 _charging = true;
                 _chargeCube.gameObject.SetActive(true);
+                Charge.Play();
             }
             if(Input.GetMouseButton(0))
             {
                 _charging = false;
                 _timer = 0f;
                 _chargeCube.gameObject.SetActive(false);
+                Charge.Stop();
+                Shoot.Play();
             }
             if(_charging)
             {
@@ -66,6 +73,8 @@ public class ChargeAttack : MonoBehaviour {
                     _timer = _coolDown;
                     _chargeArea.Activate(_damage);
                     GetComponent<PowerLevel>().AddPower(-Mathf.RoundToInt(_cost));
+                    Charge.Stop();
+                    Shoot.Play();
                 }
             }
             

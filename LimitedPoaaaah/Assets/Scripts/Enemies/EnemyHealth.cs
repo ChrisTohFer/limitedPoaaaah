@@ -8,18 +8,24 @@ public class EnemyHealth : MonoBehaviour {
 
     //Properties
     [Header("Properties")]
-    public float _maxHealth;
+    public float _maxHealth = 2;
     float _health;
+
+    //Audio
+    private AudioSource Audio;
 
     //Initialisation ~~~
 
     void Start()
     {
-        _health = _maxHealth; 
+        _health = _maxHealth;
+        Audio = GameObject.Find("Enemy Death").GetComponent<AudioSource>();
     }
+
     void OnEnable()
     {
         _health = _maxHealth;
+        Audio = GameObject.Find("Enemy Death").GetComponent<AudioSource>();
     }
 
     //Methods ~~~
@@ -30,6 +36,7 @@ public class EnemyHealth : MonoBehaviour {
         _health -= damage;
         if(_health <= 0f)
         {
+            Audio.Play();
             KillCounter.kc.IncrementCounter();
 
 

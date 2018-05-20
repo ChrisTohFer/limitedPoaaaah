@@ -19,6 +19,9 @@ public class BasicAttack : MonoBehaviour {
     public float _range = 10f;
     public float _cooldown = 1f;
 
+    //Audio
+    public AudioSource Audio;
+
     //Variables
     float _timer;
 
@@ -43,6 +46,7 @@ public class BasicAttack : MonoBehaviour {
                 p.Fire(new Vector3(position.x, transform.position.y, position.z), transform.position, _range, _projectileSpeed);
                 PlayerProj pp = proj.GetComponent<PlayerProj>();
                 pp._damage = _damage;
+                Audio.Play();
 
                 _timer = _cooldown;
             }
