@@ -52,7 +52,17 @@ public class EnemySpawner : MonoBehaviour {
         float x = width * Random.value + center.x - width / 2.0f;
         float y = height * Random.value + center.y - height / 2.0f;
 
-        return Spawn(type, new Vector3(x, 0f, y));
+        Vector3 pos = new Vector3(x, 0f, y);
+        if ((pos - GlobalTarget._player.position).magnitude < 5f)
+        {
+            //If too close to player, call self to get new position
+            return SquareSpawn(type, center, width, height);
+        }
+        else
+        {
+            return Spawn(type, new Vector3(x, 0f, y));
+        }
+        
     }
     //Spawn randomly in a circle
     public GameObject CircleSpawn(EnemyType type, Vector3 center, float radius)

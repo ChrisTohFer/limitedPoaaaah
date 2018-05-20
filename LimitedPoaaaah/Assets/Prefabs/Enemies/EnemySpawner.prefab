@@ -67,6 +67,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawner: {fileID: 114507177033815014}
   _chargeEnemySpawnTime: 2
+  _spawnTimeReduction: 0.95
 --- !u!114 &114923940856052706
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -78,6 +79,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030e028551537ba459c15a407749c8be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 1976907162755478, guid: fdd8f17b8e6e9d4408e05d91dc2b2001, type: 2}
+  _prefab: {fileID: 1347967353280550, guid: 7189b383ad8fac84aa837c488adb0403, type: 2}
   _startCount: 0
   _max: 15
