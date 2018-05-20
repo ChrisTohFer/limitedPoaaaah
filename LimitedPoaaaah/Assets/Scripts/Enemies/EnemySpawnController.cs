@@ -78,7 +78,19 @@ public class EnemySpawnController : MonoBehaviour {
             while (_batteryPotential >= 1.0f)
             {
                 _batteryPotential -= 1f;
-                _spawner.SquareSpawn(EnemySpawner.EnemyType.BATTERY, Vector3.zero, _mapSizeX, _mapSizeY);
+
+                GameObject g = _spawner.SquareSpawn(EnemySpawner.EnemyType.BATTERY, Vector3.zero, _mapSizeX, _mapSizeY);
+                if (g != null)
+                {
+                    if (g.transform.position.y > 0.9f)
+                    {
+                        g.SetActive(false);
+                        _batteryPotential += 1.0f;
+                    }
+                }
+
+                if(g != null)
+                    g.GetComponent<UnityEngine.AI.NavMeshAgent>().Warp(g.transform.position);
             }
 
             if (_timer >= _duration)

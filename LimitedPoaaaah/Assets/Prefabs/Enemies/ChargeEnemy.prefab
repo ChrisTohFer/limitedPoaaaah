@@ -114,7 +114,7 @@ MonoBehaviour:
   _speed: 8
   _angularSpeed: 360
   _acceleration: 10
-  _pathUpdateTime: 1
+  _pathUpdateTime: 4
   _updateRandomTime: 0.1
   _destinationOffset: 90
 --- !u!114 &114931286389305660
