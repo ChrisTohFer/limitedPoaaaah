@@ -4915,7 +4915,7 @@ Prefab:
     - target: {fileID: 54931159374913288, guid: 725d1a1fcd04f86468ab6b28c5cb932d,
         type: 2}
       propertyPath: m_Constraints
-      value: 112
+      value: 116
       objectReference: {fileID: 0}
     - target: {fileID: 4182413126971320, guid: 725d1a1fcd04f86468ab6b28c5cb932d, type: 2}
       propertyPath: m_LocalScale.x
@@ -11022,6 +11022,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1343208846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1343208836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae0252587cc831646a95106530fee50c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1357983400
 GameObject:
   m_ObjectHideFlags: 0

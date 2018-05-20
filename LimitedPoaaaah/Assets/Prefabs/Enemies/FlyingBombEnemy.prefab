@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4153833463522716}
   - component: {fileID: 33092896449506956}
   - component: {fileID: 23756183714820344}
-  - component: {fileID: 65675805393810514}
   m_Layer: 0
   m_Name: Left Wing
   m_TagString: Untagged
@@ -61,7 +60,6 @@ GameObject:
   - component: {fileID: 4115022289954462}
   - component: {fileID: 33658966214917052}
   - component: {fileID: 23656562044685746}
-  - component: {fileID: 65936698170201486}
   m_Layer: 0
   m_Name: Red Light
   m_TagString: Untagged
@@ -96,7 +94,6 @@ GameObject:
   - component: {fileID: 4715582047617032}
   - component: {fileID: 33376421038386676}
   - component: {fileID: 23510403653621970}
-  - component: {fileID: 65107334429884958}
   m_Layer: 0
   m_Name: Right Wing
   m_TagString: Untagged
@@ -114,7 +111,6 @@ GameObject:
   - component: {fileID: 4845249767319700}
   - component: {fileID: 33362266831898374}
   - component: {fileID: 23435138034471518}
-  - component: {fileID: 65451256307465328}
   m_Layer: 0
   m_Name: Front
   m_TagString: Untagged
@@ -415,54 +411,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1251621947882832}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65107334429884958
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1675157473316466}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &65451256307465328
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1750341557457520}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &65675805393810514
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1242353597324174}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &65936698170201486
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1286485860990194}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95965799983460594
 Animator:
   serializedVersion: 3
