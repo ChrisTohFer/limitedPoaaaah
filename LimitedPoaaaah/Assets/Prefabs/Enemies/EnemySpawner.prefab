@@ -66,8 +66,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawner: {fileID: 114507177033815014}
-  _chargeEnemySpawnTime: 2
-  _spawnTimeReduction: 0.95
+  _enemyPool: {fileID: 114923940856052706}
+  _waveCounter: {fileID: 0}
+  _waveTimer: {fileID: 0}
+  _enemiesPerWave: 3
+  _enemiesFlatIncrease: 0
+  _enemiesProportionalIncrease: 1.5
+  _waveDuration: 5
+  _durationFlatIncrease: 0
+  _durationProportionalIncrease: 1.2
+  _breakTime: 3
+  _mapSizeX: 40
+  _mapSizeY: 40
+  _timer: 0
 --- !u!114 &114923940856052706
 MonoBehaviour:
   m_ObjectHideFlags: 1
