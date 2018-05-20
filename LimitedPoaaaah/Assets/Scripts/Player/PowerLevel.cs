@@ -78,6 +78,7 @@ public class PowerLevel : MonoBehaviour {
         {
             _power = 0;
             _kill = true;
+            gameObject.SetActive(false);
         }
 
         AdjustSettings();
