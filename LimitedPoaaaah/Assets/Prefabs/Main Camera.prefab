@@ -96,11 +96,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 387a1ef3031f867488a581308c53671b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _followTarget: {fileID: 0}
   _leftBound: 0
   _rightBound: 10
   _topBound: 10
   _bottomBound: 0
   _trailDistance: 1
-  _speed: 10
-  _camHeight: 10
+  _speed: 20
+  _camHeight: 8
