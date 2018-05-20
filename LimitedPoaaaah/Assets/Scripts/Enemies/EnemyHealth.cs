@@ -30,6 +30,9 @@ public class EnemyHealth : MonoBehaviour {
         _health -= damage;
         if(_health <= 0f)
         {
+            KillCounter.kc.IncrementCounter();
+
+
             gameObject.SetActive(false);
         }
     }
