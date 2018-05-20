@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     public float speed =20;
     void Update()
     {
-        Vector3 movement;
+        Vector3 position;
 
         var x = Input.GetAxis("Horizontal") * Time.deltaTime * speed + transform.position.x;
         var z = Input.GetAxis("Vertical") * Time.deltaTime * speed + transform.position.z;

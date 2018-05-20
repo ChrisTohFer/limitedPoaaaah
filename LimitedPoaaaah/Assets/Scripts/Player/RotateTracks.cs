@@ -2,15 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RotateTracks : MonoBehaviour {
+public class RotateTracks : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    private Vector3 mousePos;
+    private float lastAngle;
+    void Update()
+    {
+        Vector3 position;
+        if (Utils.GroundRay(out position))
+        {
+
+            //   mousePos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.z, Camera.main.transform.position.z - transform.position.z));
+            transform.LookAt(position);
+            transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, transform.eulerAngles.z);
+        }
+    }
 }
