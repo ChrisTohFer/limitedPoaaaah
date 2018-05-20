@@ -179,6 +179,11 @@ Prefab:
       propertyPath: _camHeight
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114084310826612924, guid: 7bb686bf3838b424aba1d539f8f3287f,
+        type: 2}
+      propertyPath: _orthographicHeight
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7bb686bf3838b424aba1d539f8f3287f, type: 2}
   m_IsPrefabParent: 0

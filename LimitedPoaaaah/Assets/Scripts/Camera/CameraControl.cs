@@ -17,6 +17,7 @@ public class CameraControl : MonoBehaviour {
     public float _trailDistance = 1f;
     public float _speed = 5f;
     public float _camHeight = 10f;
+    public float _orthographicHeight = 10f;
     float _minSpeed;
     Vector3 _offset;
 
@@ -31,6 +32,8 @@ public class CameraControl : MonoBehaviour {
         float x = -radius * Mathf.Sin(rotation);
         float z = -radius * Mathf.Cos(rotation);
         _offset = new Vector3(x, _camHeight, z);
+
+        Camera.main.orthographicSize = _orthographicHeight / 2f;
     }
     public void SetSpeed(float speed)
     {
